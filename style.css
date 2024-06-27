@@ -1,0 +1,216 @@
+:root {
+    --primary-color: #1E3A8A; /* Azul escuro */
+    --secondary-color: #3B82F6; /* Azul claro */
+    --accent-color: #fafafa; /* Cinza claro */
+    --text-color: #FFFFFF; /* Branco */
+    --background-color: #F9FAFB; /* Fundo claro */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    background-image: url('path/to/football-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px; /* Ajuste conforme necessário */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+  }
+  
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay para melhorar a legibilidade do texto */
+    z-index: 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 1; /* Coloca o texto acima do overlay */
+  }
+  
+  header .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    z-index: 1; /* Coloca o logo acima do overlay */
+  }
+  
+  nav {
+    z-index: 1; /* Coloca o menu acima do overlay */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: var(--secondary-color);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table, th, td {
+    border: 1px solid var(--secondary-color);
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  td {
+    background-color: var(--accent-color);
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background-image: url('path/to/football-icon.png');
+    background-size: contain;
+    display: inline-block;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .column img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .img-small {
+    width: 50px;
+    height: auto;
+  }
+  
+  .img-medium {
+    width: 150px;
+    height: auto;
+  }
+  
+  .img-large {
+    width: 300px;
+    height: auto;
+  }
+  
+  /* Media query para layout responsivo */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+    }
+  }
